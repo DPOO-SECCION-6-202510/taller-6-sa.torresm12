@@ -27,14 +27,20 @@ public class PanelBotones extends JPanel implements ActionListener
     public PanelBotones( VentanaPrincipal ventanaPrincipal )
     {
         this.ventanaPrincipal = ventanaPrincipal;
-
+        
         setLayout( new FlowLayout( ) );
-
+          
         // Agrega el botón para crear un nuevo restaurante
-        // TODO completar
+        butNuevo = new JButton("Nuevo Restuarante");
+        butNuevo.setActionCommand(NUEVO);
+        butNuevo.addActionListener(this::actionPerformed);
+        add(butNuevo);
 
         // Agrega el botón para ver todos los restaurantes
-        // TODO completar
+        butVerTodos = new JButton("Ver Todos");
+        butVerTodos.setActionCommand(VER);
+        butVerTodos.addActionListener(this::actionPerformed);
+        add(butVerTodos);
     }
 
     @Override
